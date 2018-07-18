@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	tests	# do not perform "make test"
+%bcond_without	tests	# unit tests
 %bcond_without	python2 # CPython 2.x module
 %bcond_without	python3 # CPython 3.x module
 
@@ -11,7 +11,7 @@ Version:	0.5.1
 Release:	2
 License:	BSD
 Group:		Libraries/Python
-#Source0Download: https://pypi.python.org/simple/webencodings/
+#Source0Download: https://pypi.org/simple/webencodings/
 Source0:	https://files.pythonhosted.org/packages/source/w/webencodings/webencodings-%{version}.tar.gz
 # Source0-md5:	32f6e261d52e57bf7e1c4d41546d15b8
 URL:		https://github.com/SimonSapin/python-webencodings
