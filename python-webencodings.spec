@@ -8,7 +8,7 @@ Summary:	Character encoding aliases for legacy web content
 Summary(pl.UTF-8):	Aliasy kodowania znaków dla zastanych treści WWW
 Name:		python-webencodings
 Version:	0.5.1
-Release:	3
+Release:	4
 License:	BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/webencodings/
