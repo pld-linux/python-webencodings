@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_with	tests	# unit tests
+%bcond_without	tests	# unit tests
 %bcond_without	python2 # CPython 2.x module
 %bcond_without	python3 # CPython 3.x module
 
@@ -8,7 +8,7 @@ Summary:	Character encoding aliases for legacy web content
 Summary(pl.UTF-8):	Aliasy kodowania znaków dla zastanych treści WWW
 Name:		python-webencodings
 Version:	0.5.1
-Release:	10
+Release:	11
 License:	BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/webencodings/
@@ -22,7 +22,7 @@ BuildRequires:	python-setuptools
 %endif
 %if %{with python3}
 BuildRequires:	python3-modules >= 1:3.3
-%{?with_tests:BuildRequires:	python3-nose}
+%{?with_tests:BuildRequires:	python3-pynose}
 BuildRequires:	python3-setuptools
 %endif
 BuildRequires:	rpm-pythonprov
@@ -108,7 +108,7 @@ implementacja kodowania i dekodowania pochodzi z Pythona.
 %if %{with python3}
 %py3_build
 
-%{?with_tests:nosetests-%{py3_ver}}
+%{?with_tests:nosetests}
 %endif
 
 %install
